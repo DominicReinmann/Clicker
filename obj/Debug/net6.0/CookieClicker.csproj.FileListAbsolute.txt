@@ -29,3 +29,4 @@ D:\Programming\csharp\Clicker\obj\Debug\net6.0\refint\CookieClicker.dll
 D:\Programming\csharp\Clicker\obj\Debug\net6.0\CookieClicker.pdb
 D:\Programming\csharp\Clicker\obj\Debug\net6.0\CookieClicker.genruntimeconfig.cache
 D:\Programming\csharp\Clicker\obj\Debug\net6.0\ref\CookieClicker.dll
+D:\Programming\csharp\Clicker\obj\Debug\net6.0\scopedcss\Pages\Counter.razor.rz.scp.css
