@@ -1,27 +1,59 @@
-.container[b-4y8012ksfu] {
+.page-container[b-4y8012ksfu] {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     height: 100vh;
-}
-
-.possible-upgrades[b-4y8012ksfu], .active-upgrades[b-4y8012ksfu] {
-    background-color: #cccccc;
-    padding: 20px;
-    border-radius: 5px;
-    margin: 10px;
+    background-color: rgb(255, 255, 255);
 }
 
 .score-display[b-4y8012ksfu] {
-    margin-bottom: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: #CFC2BD;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.main-content[b-4y8012ksfu] {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.possible-upgrades[b-4y8012ksfu] {
+    background-color: #9AA5C0;
+    padding: 5px;
+    border-radius: 5px;
+    width: 350px;
+    height: 450px;
+}
+
+.active-upgrades[b-4y8012ksfu] {
+    background-color: #918E94;
+    padding: 5px;
+    border-radius: 5px;
+    width: 350px;
+    height: 450px;
 }
 
 .clicker-button[b-4y8012ksfu] {
-    width: 100px;
-    height: 100px;
+    min-width: 350px;
+    height: 350px;
     border-radius: 50%;
     font-size: 20px;
     line-height: 100px;
     text-align: center;
     vertical-align: middle;
+}
+
+.active-upgrades h2[b-4y8012ksfu] {
+   text-align: center;
+}
+.possible-upgrades h2[b-4y8012ksfu] {
+    text-align: center;
+}
+
+#active[b-4y8012ksfu] {
+    text-align: center;
 }

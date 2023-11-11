@@ -2,37 +2,74 @@
 
 @layout MainLayout
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="possible-upgrades">
-                <h2>Mögliche Upgrades</h2>
-                <!-- Hier kommt die Logik für mögliche Upgrades hin -->
-            </div>
+<div class="page-container">
+    <div class="score-display">
+        <h2>Score</h2>
+        <p>@score</p>
+    </div>
+
+    <div class="main-content">
+        <div class="possible-upgrades">
+            <h2>Mögliche Upgrades</h2>
+            <table class="table" id="possible">
+                    <tr>
+                        <td>Auto-Clicker</td>
+                        <td>30</td>
+                        <td><input type="button"></td>
+                    </tr>
+                    <tr>
+                        <td>Domis Finger</td>
+                        <td>69</td>
+                        <td><input type="button"></td>
+                    </tr>
+            </table>
         </div>
 
-        <div class="col-md-4 text-center">
-            <div class="score-display">
-                <h2>Score</h2>
-                <p>@score</p>
-            </div>
-            <button class="btn btn-primary clicker-button" @onclick="IncrementScore">Clicker</button>
+        <div class="clicker-container" @onclick="IncrementScore">
+            <img src="Images/whuahaha.png" alt="Clicker" class="clicker-button" />
         </div>
 
-        <div class="col-md-4">
-            <div class="active-upgrades">
-                <h2>Aktive Upgrades</h2>
-                <!-- Hier kommt die Logik für aktive Upgrades hin -->
-            </div>
+        <div class="active-upgrades">
+            <h2>Aktive Upgrades</h2>
+            <table class="table" id="active">
+                    <tr>
+                        <td>Auto-Clicker</td>
+                    </tr>
+                    <tr>
+                        <td>Domis Finger</td>
+                    </tr>
+            </table>
         </div>
     </div>
 </div>
 
 @code {
     private int score = 0;
+    private List<Upgrade> possibleUpgrades = new List<Upgrade>
+    {
+        new Upgrade { Name = "Upgrade 1", Cost = 10 },
+        new Upgrade { Name = "Upgrade 2", Cost = 20 },
+        // Weitere Upgrades hinzufügen
+    };
+
+    private List<Upgrade> activeUpgrades = new List<Upgrade>();
+    // ... (Vorherige Liste von aktiven Upgrades)
+
+    private bool IsUpgradeAvailable(Upgrade upgrade)
+    {
+        return score >= upgrade.Cost;
+    }
 
     private void IncrementScore()
     {
-        score++; // Hier könnte die Logik erweitert werden, um Upgrades zu berücksichtigen
+        score++;
+        // Überprüfen, ob neue Upgrades verfügbar sind und zu activeUpgrades hinzufügen
+    }
+
+    public class Upgrade
+    {
+        public string Name { get; set; }
+        public int Cost { get; set; }
+        public string Effect { get; set; }
     }
 }
