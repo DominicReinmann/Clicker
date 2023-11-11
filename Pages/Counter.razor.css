@@ -1,0 +1,27 @@
+﻿.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.possible-upgrades, .active-upgrades {
+    background-color: #cccccc;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.score-display {
+    margin-bottom: 20px;
+}
+
+.clicker-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 100px;
+    text-align: center;
+    vertical-align: middle;
+}
