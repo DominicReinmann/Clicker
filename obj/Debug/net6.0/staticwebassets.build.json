@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "t7d1giKScMtzL+JybTgzH3OrdxSmnPokX3jqtUT8vC0=",
+  "Hash": "ZyRCYKcW1dHI5rlg2SQcqJduS0Q6kl6ujjMkq1C0lwQ=",
   "Source": "CookieClicker",
   "BasePath": "_content/CookieClicker",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "CookieClicker\\wwwroot",
       "Source": "CookieClicker",
-      "ContentRoot": "D:\\Programming\\csharp\\Clicker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\",
       "BasePath": "_content/CookieClicker",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Programming\\csharp\\Clicker\\obj\\Debug\\net6.0\\scopedcss\\bundle\\CookieClicker.styles.css",
+      "Identity": "C:\\Users\\danie\\source\\repos\\Clicker\\obj\\Debug\\net6.0\\scopedcss\\bundle\\CookieClicker.styles.css",
       "SourceId": "CookieClicker",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Programming\\csharp\\Clicker\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\danie\\source\\repos\\Clicker\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/CookieClicker",
       "RelativePath": "CookieClicker.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Programming\\csharp\\Clicker\\obj\\Debug\\net6.0\\scopedcss\\bundle\\CookieClicker.styles.css"
+      "OriginalItemSpec": "C:\\Users\\danie\\source\\repos\\Clicker\\obj\\Debug\\net6.0\\scopedcss\\bundle\\CookieClicker.styles.css"
     },
     {
-      "Identity": "D:\\Programming\\csharp\\Clicker\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\CookieClicker.bundle.scp.css",
+      "Identity": "C:\\Users\\danie\\source\\repos\\Clicker\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\CookieClicker.bundle.scp.css",
       "SourceId": "CookieClicker",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Programming\\csharp\\Clicker\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\danie\\source\\repos\\Clicker\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/CookieClicker",
       "RelativePath": "CookieClicker.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Programming\\csharp\\Clicker\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\CookieClicker.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\danie\\source\\repos\\Clicker\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\CookieClicker.bundle.scp.css"
     },
     {
-      "Identity": "D:\\Programming\\csharp\\Clicker\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "CookieClicker",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Programming\\csharp\\Clicker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\",
       "BasePath": "_content/CookieClicker",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\Programming\\csharp\\Clicker\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "CookieClicker",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Programming\\csharp\\Clicker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\",
       "BasePath": "_content/CookieClicker",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\Programming\\csharp\\Clicker\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "CookieClicker",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Programming\\csharp\\Clicker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\",
       "BasePath": "_content/CookieClicker",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "D:\\Programming\\csharp\\Clicker\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "CookieClicker",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Programming\\csharp\\Clicker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\",
       "BasePath": "_content/CookieClicker",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "D:\\Programming\\csharp\\Clicker\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "CookieClicker",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Programming\\csharp\\Clicker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\",
       "BasePath": "_content/CookieClicker",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "D:\\Programming\\csharp\\Clicker\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "CookieClicker",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Programming\\csharp\\Clicker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\",
       "BasePath": "_content/CookieClicker",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "D:\\Programming\\csharp\\Clicker\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "CookieClicker",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Programming\\csharp\\Clicker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\",
       "BasePath": "_content/CookieClicker",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "D:\\Programming\\csharp\\Clicker\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "CookieClicker",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Programming\\csharp\\Clicker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\",
       "BasePath": "_content/CookieClicker",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "D:\\Programming\\csharp\\Clicker\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "CookieClicker",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Programming\\csharp\\Clicker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\",
       "BasePath": "_content/CookieClicker",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "D:\\Programming\\csharp\\Clicker\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "CookieClicker",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Programming\\csharp\\Clicker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\",
       "BasePath": "_content/CookieClicker",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "D:\\Programming\\csharp\\Clicker\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "CookieClicker",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Programming\\csharp\\Clicker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\",
       "BasePath": "_content/CookieClicker",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "D:\\Programming\\csharp\\Clicker\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\css\\site.css",
       "SourceId": "CookieClicker",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Programming\\csharp\\Clicker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\",
       "BasePath": "_content/CookieClicker",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\Programming\\csharp\\Clicker\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\favicon.ico",
       "SourceId": "CookieClicker",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Programming\\csharp\\Clicker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\",
       "BasePath": "_content/CookieClicker",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -270,6 +270,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\Images\\whuahaha.png",
+      "SourceId": "CookieClicker",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\danie\\source\\repos\\Clicker\\wwwroot\\",
+      "BasePath": "_content/CookieClicker",
+      "RelativePath": "Images/whuahaha.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\whuahaha.png"
     }
   ]
 }
