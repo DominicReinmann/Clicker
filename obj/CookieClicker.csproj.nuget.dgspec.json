@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programming\\csharp\\Clicker\\CookieClicker\\CookieClicker.csproj": {}
+    "D:\\Programming\\csharp\\Clicker\\CookieClicker.csproj": {}
   },
   "projects": {
-    "D:\\Programming\\csharp\\Clicker\\CookieClicker\\CookieClicker.csproj": {
+    "D:\\Programming\\csharp\\Clicker\\CookieClicker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming\\csharp\\Clicker\\CookieClicker\\CookieClicker.csproj",
+        "projectUniqueName": "D:\\Programming\\csharp\\Clicker\\CookieClicker.csproj",
         "projectName": "CookieClicker",
-        "projectPath": "D:\\Programming\\csharp\\Clicker\\CookieClicker\\CookieClicker.csproj",
+        "projectPath": "D:\\Programming\\csharp\\Clicker\\CookieClicker.csproj",
         "packagesPath": "C:\\Users\\Dominic\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming\\csharp\\Clicker\\CookieClicker\\obj\\",
+        "outputPath": "D:\\Programming\\csharp\\Clicker\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
