@@ -34,7 +34,7 @@
     padding: 5px;
     border-radius: 5px;
     width: 330px;
-    height: 600px;
+    height: 620px;
 }
 
 .active-upgrades[b-4y8012ksfu] {
@@ -42,7 +42,7 @@
     padding: 5px;
     border-radius: 5px;
     width: 330px;
-    height: 600px;
+    height: 620px;
 }
 
 .clicker-button[b-4y8012ksfu] {
@@ -84,4 +84,9 @@ td img[b-4y8012ksfu] {
     text: center;
     padding: 6px;
     border-radius: 5px;
+}
+
+.clicked[b-4y8012ksfu] {
+    transform: scale(0.9);
+    transition: transform 0.05s ease-out;
 }

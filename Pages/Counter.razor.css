@@ -34,7 +34,7 @@
     padding: 5px;
     border-radius: 5px;
     width: 330px;
-    height: 600px;
+    height: 620px;
 }
 
 .active-upgrades {
@@ -42,7 +42,7 @@
     padding: 5px;
     border-radius: 5px;
     width: 330px;
-    height: 600px;
+    height: 620px;
 }
 
 .clicker-button {
@@ -84,4 +84,9 @@ td img {
     text: center;
     padding: 6px;
     border-radius: 5px;
+}
+
+.clicked {
+    transform: scale(0.9);
+    transition: transform 0.05s ease-out;
 }

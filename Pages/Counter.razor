@@ -29,7 +29,7 @@
                 }
             </table>
         </div>
-        <div class="clicker-container" @onclick="IncrementScore">
+        <div class="clicker-container @GetClickerEffectClass()" @onclick="IncrementScore">
             <img src="Images/shield.png" alt="Clicker" class="clicker-button" />
         </div>
         <div class="active-upgrades">
@@ -65,13 +65,29 @@
     private int elapsed = 0;
     private int multiplier = 0;
 
+    private bool isButtonClick = false;
+
     private List<Upgrades> activeUpgrades = new List<Upgrades>();
     private List<Upgrades> possibleUpgrades = new List<Upgrades>();
 
-    private void IncrementScore()
+
+    private string GetClickerEffectClass()
+    {
+        return isButtonClick ? "clicked" : "";
+    }
+
+
+    private async Task IncrementScore()
     {
         Increment(multiplier);
         AddUpgrade();
+        isButtonClick = true;
+        StateHasChanged();
+
+        await Task.Delay(10);
+
+        isButtonClick = false;
+        await Task.Delay(10); 
         StateHasChanged();
     }
 
@@ -180,7 +196,7 @@
         }
         else
         {
-            errorMessage = "Not enough score to purchase the upgrade.";
+            errorMessage = "Not enough points to purchase the upgrade.";
             Console.WriteLine("Not enough score to purchase the upgrade.");
         }
         AddUpgrade();
@@ -195,11 +211,11 @@
         }
         if (name == "Thors Hammer")
         {
-            IncreasScoreOverTime2();
+            IncreasScoreOverTime(name);
         }
         if (name == "Golden Goblet")
         {
-            IncreasScoreOverTime3();
+            IncreasScoreOverTime(name);
         }
         if (name == "Golden Hand")
         {
@@ -207,7 +223,7 @@
         }
         if (name == "Knights Sword")
         {
-            IncreasScoreOverTime5();
+            IncreasScoreOverTime(name);
         }
         if (name == "Cristal Hand")
         {
@@ -215,11 +231,11 @@
         }
         if (name == "a Wizzards Ball")
         {
-            IncreasScoreOverTime7();
+            IncreasScoreOverTime(name);
         }
         if (name == "Magic Wand")
         {
-            IncreasScoreOverTime8();
+            IncreasScoreOverTime(name);
         }
 
     }
@@ -230,42 +246,72 @@
         Console.WriteLine("Multiplier increased to: " + multiplier);
     }
 
-
-    #region Timer
-
-    private void IncreasScoreOverTime2()
+    private void IncreasScoreOverTime(string name)
     {
-        forTimer++;
+        int interval = GetUpgradeInterval(name);
 
-        Timer timer = new Timer(ScoreIncrease2, null, 0, forTimer * 4 * 1000);
-        Console.WriteLine($"Timer {forTimer} started.");
+        Timer timer = new Timer(state => ScoreIncrease(name), null, 0, interval * 1000);
+
+        Console.WriteLine($"Timer for {name} started with interval {interval} seconds.");
     }
 
-    private void IncreasScoreOverTime3()
+
+    private int GetUpgradeInterval(string name)
     {
-        timer3 = new Timer(ScoreIncrease3, null, 0, 6 * 1000);
-        Console.WriteLine("Timer started3.");
+        switch (name)
+        {
+            case "Thors Hammer":
+                return 1;
+            case "Golden Goblet":
+                return 6;
+            case "Knights Sword":
+                return 10;
+            case "Cristal Hand":
+                return 12;
+            case "a Wizzards Ball":
+                return 12;
+            case "Magic Wand":
+                return 16;
+            default:
+                return 0;
+        }
     }
 
-    private void IncreasScoreOverTime5()
+
+    private int GetUpgradeEffect(string name)
     {
-        timer5 = new Timer(ScoreIncrease5, null, 0, 10 * 1000);
-        Console.WriteLine("Timer started5.");
+        switch (name)
+        {
+            case "Thors Hammer":
+                return 1;
+            case "Golden Goblet":
+                return 6;
+            case "Knights Sword":
+                return 10;
+            case "Cristal Hand":
+                return 14;
+            case "a Wizzards Ball":
+                return 14;
+            case "Magic Wand":
+                return 16;
+            default:
+                return 0;
+        }
     }
 
-    private void IncreasScoreOverTime7()
+    private async void ScoreIncrease(string name)
     {
-        timer7 = new Timer(ScoreIncrease7, null, 0, 12 * 1000);
-        Console.WriteLine("Timer started6.");
-    }
+        Upgrades upgrade = activeUpgrades.FirstOrDefault(x => x.Name == name);
 
-    private void IncreasScoreOverTime8()
-    {
-        timer8 = new Timer(ScoreIncrease8, null, 0, 16 * 1000);
-        Console.WriteLine("Timer started8.");
-    }
+        if (upgrade != null)
+        {
+            score += upgrade.Count * GetUpgradeEffect(name);
 
-    #endregion
+            Console.WriteLine($"Score incremented for {name}: {score}");
+
+            await InvokeAsync(StateHasChanged);
+        }
+    }
 
     #region Automatic score increase
 
