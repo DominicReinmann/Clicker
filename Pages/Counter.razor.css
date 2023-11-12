@@ -1,16 +1,24 @@
-﻿.page-container {
+﻿
+
+.page-container {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: rgb(255, 255, 255);
+   
 }
 
 .score-display {
     text-align: center;
+    font-size: 30px;
     padding: 20px;
-    background-color: #CFC2BD;
+    background-color: #cfc2bdd6;
     border-radius: 5px;
     width: 100%;
+}
+.score-display h2{
+    text-align: center;
+    font-size: 50px;
+
 }
 
 .main-content {
@@ -22,19 +30,19 @@
 }
 
 .possible-upgrades {
-    background-color: #9AA5C0;
+    background-color: #9aa5c0d9;
     padding: 5px;
     border-radius: 5px;
-    width: 350px;
-    height: 450px;
+    width: 330px;
+    height: 620px;
 }
 
 .active-upgrades {
-    background-color: #918E94;
+    background-color: #918e94d8;
     padding: 5px;
     border-radius: 5px;
-    width: 350px;
-    height: 450px;
+    width: 330px;
+    height: 620px;
 }
 
 .clicker-button {
@@ -48,12 +56,37 @@
 }
 
 .active-upgrades h2 {
-   text-align: center;
+    text-align: center;
+    padding: 10px 0 0 0;
 }
+
 .possible-upgrades h2 {
     text-align: center;
+    padding: 10px 0 0 0;
 }
 
 #active {
     text-align: center;
+}
+
+td {
+    padding: 4px 0 4px 0;
+}
+
+td img {
+    height: 60px;
+    width: 60px;
+}
+
+
+.error-message-box {
+    background-color:#f80f0f8e; 
+    text: center;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+.clicked {
+    transform: scale(0.9);
+    transition: transform 0.05s ease-out;
 }
