@@ -1,16 +1,24 @@
+
+
 .page-container[b-4y8012ksfu] {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: rgb(255, 255, 255);
+   
 }
 
 .score-display[b-4y8012ksfu] {
     text-align: center;
+    font-size: 30px;
     padding: 20px;
-    background-color: #CFC2BD;
+    background-color: #cfc2bdd6;
     border-radius: 5px;
     width: 100%;
+}
+.score-display h2[b-4y8012ksfu]{
+    text-align: center;
+    font-size: 50px;
+
 }
 
 .main-content[b-4y8012ksfu] {
@@ -22,19 +30,19 @@
 }
 
 .possible-upgrades[b-4y8012ksfu] {
-    background-color: #9AA5C0;
+    background-color: #9aa5c0d9;
     padding: 5px;
     border-radius: 5px;
-    width: 350px;
-    height: 450px;
+    width: 330px;
+    height: 600px;
 }
 
 .active-upgrades[b-4y8012ksfu] {
-    background-color: #918E94;
+    background-color: #918e94d8;
     padding: 5px;
     border-radius: 5px;
-    width: 350px;
-    height: 450px;
+    width: 330px;
+    height: 600px;
 }
 
 .clicker-button[b-4y8012ksfu] {
@@ -48,12 +56,32 @@
 }
 
 .active-upgrades h2[b-4y8012ksfu] {
-   text-align: center;
+    text-align: center;
+    padding: 10px 0 0 0;
 }
+
 .possible-upgrades h2[b-4y8012ksfu] {
     text-align: center;
+    padding: 10px 0 0 0;
 }
 
 #active[b-4y8012ksfu] {
     text-align: center;
+}
+
+td[b-4y8012ksfu] {
+    padding: 4px 0 4px 0;
+}
+
+td img[b-4y8012ksfu] {
+    height: 60px;
+    width: 60px;
+}
+
+
+.error-message-box[b-4y8012ksfu] {
+    background-color:#f80f0f8e; 
+    text: center;
+    padding: 6px;
+    border-radius: 5px;
 }

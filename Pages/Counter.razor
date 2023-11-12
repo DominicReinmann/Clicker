@@ -1,75 +1,319 @@
-﻿@page "/counter"
+﻿@page "/"
 
 @layout MainLayout
 
 <div class="page-container">
+    <img src="Images/background.jpg" class="modal-backdrop" style="z-index: -1;" />
     <div class="score-display">
         <h2>Score</h2>
         <p>@score</p>
     </div>
-
     <div class="main-content">
         <div class="possible-upgrades">
             <h2>Mögliche Upgrades</h2>
+            @if (!string.IsNullOrEmpty(errorMessage))
+            {
+                <div class="error-message-box">
+                    @errorMessage
+                </div>
+            }
             <table class="table" id="possible">
+                @foreach (var upgrade in possibleUpgrades)
+                {
                     <tr>
-                        <td>Auto-Clicker</td>
-                        <td>30</td>
-                        <td><input type="button"></td>
+                        <td class="col-3"><img src="Images/@upgrade.svg" /></td>
+                        <td class="col-4">@upgrade.Name</td>
+                        <td class="col-3">@upgrade.Cost</td>
+                        <td class="col-2"><button class="btn btn-dark" @onclick="() => Upgrade(upgrade)">Purchase</button></td>
                     </tr>
-                    <tr>
-                        <td>Domis Finger</td>
-                        <td>69</td>
-                        <td><input type="button"></td>
-                    </tr>
+                }
             </table>
         </div>
-
         <div class="clicker-container" @onclick="IncrementScore">
-            <img src="Images/whuahaha.png" alt="Clicker" class="clicker-button" />
+            <img src="Images/shield.png" alt="Clicker" class="clicker-button" />
         </div>
-
         <div class="active-upgrades">
             <h2>Aktive Upgrades</h2>
             <table class="table" id="active">
+                @foreach (var activeUpgrade in activeUpgrades)
+                {
                     <tr>
-                        <td>Auto-Clicker</td>
+                        <td class="col-3"><img src="Images/@activeUpgrade.svg" /></td>
+                        <td class="col-6">@activeUpgrade.Name </td>
+                        <td class="col-3">X @activeUpgrade.Count </td>
                     </tr>
-                    <tr>
-                        <td>Domis Finger</td>
-                    </tr>
+                }
             </table>
         </div>
     </div>
 </div>
 
 @code {
+    private string errorMessage = string.Empty;
     private int score = 0;
-    private List<Upgrade> possibleUpgrades = new List<Upgrade>
-    {
-        new Upgrade { Name = "Upgrade 1", Cost = 10 },
-        new Upgrade { Name = "Upgrade 2", Cost = 20 },
-        // Weitere Upgrades hinzufügen
-    };
 
-    private List<Upgrade> activeUpgrades = new List<Upgrade>();
-    // ... (Vorherige Liste von aktiven Upgrades)
+    private Timer timer2;
+    private Timer timer3;
+    private Timer timer5;
+    private Timer timer7;
+    private Timer timer8;
 
-    private bool IsUpgradeAvailable(Upgrade upgrade)
-    {
-        return score >= upgrade.Cost;
-    }
+    private int forTimer = 0;
+
+    private int totalTime = 20;
+    private int interval = 1;
+    private int elapsed = 0;
+    private int multiplier = 0;
+
+    private List<Upgrades> activeUpgrades = new List<Upgrades>();
+    private List<Upgrades> possibleUpgrades = new List<Upgrades>();
 
     private void IncrementScore()
     {
-        score++;
-        // Überprüfen, ob neue Upgrades verfügbar sind und zu activeUpgrades hinzufügen
+        Increment(multiplier);
+        AddUpgrade();
+        StateHasChanged();
     }
 
-    public class Upgrade
+    private void Increment(int multiplier)
+    {
+        if (multiplier == 0)
+        {
+            score++;
+        }
+        else
+        {
+            score += 1 * multiplier;
+        }
+        Console.WriteLine("Score incremented: " + score);
+    }
+
+    private bool IsUpgradeAvailable(Upgrades upgrade)
+    {
+        Console.WriteLine("Score: " + score + " upgrade cost " + upgrade.Cost);
+        return score >= upgrade.Cost;
+    }
+
+    public void AddUpgrade()
+    {
+        if (score >= 10 && !ActiveListContains("Extra Hand") && !PossibleListContains("Extra Hand"))
+        {
+            possibleUpgrades.Add(new Upgrades { Name = "Extra Hand", Cost = 10, svg = "NormalFinger.svg" });
+        }
+        if (score >= 100 && !PossibleListContains("Thors Hammer"))
+        {
+            possibleUpgrades.Add(new Upgrades { Name = "Thors Hammer", Cost = 100, svg = "Hammer.svg" });
+        }
+        if (score >= 300 && !PossibleListContains("Golden Goblet"))
+        {
+            possibleUpgrades.Add(new Upgrades { Name = "Golden Goblet", Cost = 300, svg = "Goblet.svg" });
+        }
+        if (score >= 400 && !ActiveListContains("Golden Hand") && !PossibleListContains("Golden Hand"))
+        {
+            possibleUpgrades.Add(new Upgrades { Name = "Golden Hand", Cost = 400, svg = "GoldFinger.svg" });
+        }
+        if (score >= 500 && !PossibleListContains("Knights Sword"))
+        {
+            possibleUpgrades.Add(new Upgrades { Name = "Knights Sword", Cost = 500, svg = "Sword.svg" });
+        }
+        if (score >= 600 && !ActiveListContains("Cristal Hand") && !PossibleListContains("Cristal Hand"))
+        {
+            possibleUpgrades.Add(new Upgrades { Name = "Cristal Hand", Cost = 600, svg = "BlueFinger.svg" });
+        }
+        if (score >= 700 && !PossibleListContains("a Wizzards Ball"))
+        {
+            possibleUpgrades.Add(new Upgrades { Name = "a Wizzards Ball", Cost = 700, svg = "Cristalball.svg" });
+        }
+        if (score >= 800 && !PossibleListContains("Magic Wand"))
+        {
+            possibleUpgrades.Add(new Upgrades { Name = "Magic Wand", Cost = 800, svg = "Wand.svg" });
+        }
+    }
+
+    #region CheckIfExists
+
+    private bool ActiveListContains(string name)
+    {
+        bool contains = false;
+        if (activeUpgrades.Any(x => x.Name == name))
+        {
+            contains = true;
+        }
+        return contains;
+    }
+
+    private bool PossibleListContains(string name)
+    {
+        bool contains = false;
+        if (possibleUpgrades.Any(x => x.Name == name))
+        {
+            contains = true;
+        }
+        return contains;
+    }
+
+    #endregion
+
+    private void Upgrade(Upgrades upgrade)
+    {
+        errorMessage = string.Empty;
+        StateHasChanged();
+        if (IsUpgradeAvailable(upgrade))
+        {
+
+            Upgrades existingUpgrade = activeUpgrades.FirstOrDefault(x => x.Name == upgrade.Name);
+
+            if (existingUpgrade != null)
+            {
+                existingUpgrade.Count += 1;
+            }
+            else
+            {
+                upgrade.Count = 1;
+                activeUpgrades.Add(upgrade);
+                ActiveUpgrade(upgrade.Name);
+            }
+            possibleUpgrades.Remove(upgrade);
+            score -= upgrade.Cost;
+            AddUpgrade();
+            StateHasChanged();
+        }
+        else
+        {
+            errorMessage = "Not enough score to purchase the upgrade.";
+            Console.WriteLine("Not enough score to purchase the upgrade.");
+        }
+        AddUpgrade();
+
+    }
+
+    private void ActiveUpgrade(string name)
+    {
+        if (name == "Extra Hand")
+        {
+            IncreaseMultiplier(2);
+        }
+        if (name == "Thors Hammer")
+        {
+            IncreasScoreOverTime2();
+        }
+        if (name == "Golden Goblet")
+        {
+            IncreasScoreOverTime3();
+        }
+        if (name == "Golden Hand")
+        {
+            IncreaseMultiplier(4);
+        }
+        if (name == "Knights Sword")
+        {
+            IncreasScoreOverTime5();
+        }
+        if (name == "Cristal Hand")
+        {
+            IncreaseMultiplier(6);
+        }
+        if (name == "a Wizzards Ball")
+        {
+            IncreasScoreOverTime7();
+        }
+        if (name == "Magic Wand")
+        {
+            IncreasScoreOverTime8();
+        }
+
+    }
+
+    private void IncreaseMultiplier(int value)
+    {
+        multiplier = value;
+        Console.WriteLine("Multiplier increased to: " + multiplier);
+    }
+
+
+    #region Timer
+
+    private void IncreasScoreOverTime2()
+    {
+        forTimer++;
+
+        Timer timer = new Timer(ScoreIncrease2, null, 0, forTimer * 4 * 1000);
+        Console.WriteLine($"Timer {forTimer} started.");
+    }
+
+    private void IncreasScoreOverTime3()
+    {
+        timer3 = new Timer(ScoreIncrease3, null, 0, 6 * 1000);
+        Console.WriteLine("Timer started3.");
+    }
+
+    private void IncreasScoreOverTime5()
+    {
+        timer5 = new Timer(ScoreIncrease5, null, 0, 10 * 1000);
+        Console.WriteLine("Timer started5.");
+    }
+
+    private void IncreasScoreOverTime7()
+    {
+        timer7 = new Timer(ScoreIncrease7, null, 0, 12 * 1000);
+        Console.WriteLine("Timer started6.");
+    }
+
+    private void IncreasScoreOverTime8()
+    {
+        timer8 = new Timer(ScoreIncrease8, null, 0, 16 * 1000);
+        Console.WriteLine("Timer started8.");
+    }
+
+    #endregion
+
+    #region Automatic score increase
+
+
+    private async void ScoreIncrease2(object state)
+    {
+        score += 4;
+        Console.WriteLine("Score incremented2: " + score);
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private async void ScoreIncrease3(object state)
+    {
+        score += 6;
+        Console.WriteLine("Score incremented3: " + score);
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private async void ScoreIncrease5(object state)
+    {
+        score += 10;
+        Console.WriteLine("Score incremented5: " + score);
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private async void ScoreIncrease7(object state)
+    {
+        score += 14;
+        Console.WriteLine("Score incremented7: " + score);
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private async void ScoreIncrease8(object state)
+    {
+        score += 16;
+        Console.WriteLine("Score incremented8: " + score);
+        await InvokeAsync(StateHasChanged);
+    }
+
+    #endregion
+
+
+    public class Upgrades
     {
         public string Name { get; set; }
         public int Cost { get; set; }
         public string Effect { get; set; }
+        public int Count { get; set; }
+        public string svg { get; set; }
     }
 }

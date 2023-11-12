@@ -1,7 +1,4 @@
 
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
-
 namespace CookieClicker
 {
     public class Program
@@ -13,6 +10,7 @@ namespace CookieClicker
             // Add services to the container.
             builder.Services.AddRazorPages();
             builder.Services.AddServerSideBlazor();
+         //   builder.Services.AddTransient<ILogic, Logic>();
 
             var app = builder.Build();
 

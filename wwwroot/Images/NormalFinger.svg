@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-21.0086,-21.0086)">
+        <g transform="matrix(0.707107,0.707107,-0.707107,0.707107,41.5147,-384.871)">
+            <use xlink:href="#_Image1" x="288" y="284" width="51px" height="35px"/>
+        </g>
+    </g>
+    <defs>
+        <image id="_Image1" width="51px" height="35px" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAjCAYAAAA5dzKxAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACWElEQVRYhd1YsU7DMBB9QXxBKzpQhg4gMSG6dmNnZGZnROrGzFaJkb1zR3a2SkyVUAcQDB3aDrFSqV8QBmpzduzUSc4p8KQMddyzn8939y7AP0LEbC8NaHsr9pjspJsH49EwM1YXOE4vBQAxfcHH27v2ond1zbWGF/Yr/Fedupi+YC2EerEUCWbzRZV9lUJZMsobayGwFgJxsgLwTWRXKENGEZGgRKRH+veD6rsriCL32XqtcojUns18FswlAfwOIoD7mmVSqssbAHYS7DaYZDQvSNi8IWGJkZ14BdDJZAIb+CFi1pCc9FtroQQ5PHqKqYuI6RGTSK97hlazgeOLSzU2Hg3RajYyK8fJShZTfD4/WXcn15PzzLnUBuVhJUMLoBnoFLP5QhGxbUiO264nFwipSJLRiiDdEMVSJDg8aAbbWFHIw726uQWASEsAlIgNZYjYvEnROWqXWtMgAuDnmqWjxwecn56oF5xXYzx59ZonM+Lgru89d4MIqCY0vVFU2hSYr5UBKxnugCU9DgCYmY+tLmnNWZysWIm0mg31mCCplq0uqZgxTy80zEzEYZOrbf4VCJIAfLJXiH5HkZFu5yiKve6Z/luXHhSsopTdM3nBHicrjCevwbpQlQBkoaIVOZR0WYqENfAlcj3DqcWorKEShBOa0KQyooqHXAmgc9SmRNibOK0FMDVRGUJmzNAex7EuGzQygNs7FNuI2b6dhYgRExkygF21bpPqLszmi+DXK8+wNynZm8gx+tvsW+r44OEynBF/Pj2GC3V9ufE1zqFsd/YJ6k/iC7nmRtU+MtacAAAAAElFTkSuQmCC"/>
+    </defs>
+</svg>
