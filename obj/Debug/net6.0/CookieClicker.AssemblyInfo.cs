@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CookieClicker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6a286570af661566957b506cb72e74b5539c1a40")]
 [assembly: System.Reflection.AssemblyProductAttribute("CookieClicker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CookieClicker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

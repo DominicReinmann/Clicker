@@ -1,5 +1,4 @@
 ﻿@page "/"
-
 @layout MainLayout
 
 <div class="page-container">
@@ -75,7 +74,6 @@
     {
         return isButtonClick ? "clicked" : "";
     }
-
 
     private async Task IncrementScore()
     {
@@ -250,11 +248,10 @@
     {
         int interval = GetUpgradeInterval(name);
 
-        Timer timer = new Timer(state => ScoreIncrease(name), null, 0, interval * 1000);
+        Timer timer = new Timer(state => ScoreIncrease(name), null, 0, interval * 10);
 
         Console.WriteLine($"Timer for {name} started with interval {interval} seconds.");
     }
-
 
     private int GetUpgradeInterval(string name)
     {
@@ -276,7 +273,6 @@
                 return 0;
         }
     }
-
 
     private int GetUpgradeEffect(string name)
     {
@@ -314,8 +310,6 @@
     }
 
     #region Automatic score increase
-
-
     private async void ScoreIncrease2(object state)
     {
         score += 4;
@@ -352,7 +346,6 @@
     }
 
     #endregion
-
 
     public class Upgrades
     {
